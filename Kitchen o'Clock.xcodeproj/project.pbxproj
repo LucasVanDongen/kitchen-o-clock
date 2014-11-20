@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		A0055CF91A1D84130030EABC /* Bariol_Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = A0055CF61A1D84130030EABC /* Bariol_Bold.otf */; };
 		A0055CFA1A1D84130030EABC /* logo_view.png in Resources */ = {isa = PBXBuildFile; fileRef = A0055CF81A1D84130030EABC /* logo_view.png */; };
+		A02CC92F1A1D88140075BEC6 /* setting_button@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A02CC92E1A1D88140075BEC6 /* setting_button@3x.png */; };
 		A0CFD5DF1A0B0ADD00BDB0B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CFD5DE1A0B0ADD00BDB0B1 /* AppDelegate.swift */; };
 		A0CFD5E11A0B0ADD00BDB0B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0CFD5E01A0B0ADD00BDB0B1 /* ViewController.swift */; };
 		A0CFD5E41A0B0ADD00BDB0B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A0CFD5E21A0B0ADD00BDB0B1 /* Main.storyboard */; };
@@ -30,6 +31,7 @@
 /* Begin PBXFileReference section */
 		A0055CF61A1D84130030EABC /* Bariol_Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Bariol_Bold.otf; sourceTree = "<group>"; };
 		A0055CF81A1D84130030EABC /* logo_view.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo_view.png; sourceTree = "<group>"; };
+		A02CC92E1A1D88140075BEC6 /* setting_button@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "setting_button@3x.png"; sourceTree = "<group>"; };
 		A0CFD5D91A0B0ADC00BDB0B1 /* Kitchen o'Clock.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kitchen o'Clock.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A0CFD5DD1A0B0ADD00BDB0B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A0CFD5DE1A0B0ADD00BDB0B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		A0055CF71A1D84130030EABC /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				A02CC92E1A1D88140075BEC6 /* setting_button@3x.png */,
 				A0055CF81A1D84130030EABC /* logo_view.png */,
 			);
 			path = Images;
@@ -226,6 +229,7 @@
 			files = (
 				A0CFD5E41A0B0ADD00BDB0B1 /* Main.storyboard in Resources */,
 				A0CFD5E91A0B0ADD00BDB0B1 /* LaunchScreen.xib in Resources */,
+				A02CC92F1A1D88140075BEC6 /* setting_button@3x.png in Resources */,
 				A0CFD5E61A0B0ADD00BDB0B1 /* Images.xcassets in Resources */,
 				A0055CFA1A1D84130030EABC /* logo_view.png in Resources */,
 				A0055CF91A1D84130030EABC /* Bariol_Bold.otf in Resources */,
