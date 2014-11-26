@@ -41,7 +41,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo_view.png" translatesAutoresizingMaskIntoConstraints="NO" id="gtw-zj-vEV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="gtw-zj-vEV">
                                 <rect key="frame" x="46" y="46" width="508" height="508"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="2Gj-MH-kwL"/>
@@ -225,7 +225,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="logo_view.png" width="485" height="682"/>
-        <image name="setting_button@3x.png" width="66" height="67"/>
+        <image name="logo.png" width="954" height="1342"/>
+        <image name="setting_button@3x.png" width="453" height="459"/>
     </resources>
 </document>
