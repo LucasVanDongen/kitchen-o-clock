@@ -10,6 +10,8 @@
             <string>Bariol-Bold</string>
             <string>Bariol-Bold</string>
             <string>Bariol-Bold</string>
+            <string>Bariol-Bold</string>
+            <string>Bariol-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -42,7 +44,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="gtw-zj-vEV">
-                                <rect key="frame" x="46" y="46" width="508" height="508"/>
+                                <rect key="frame" x="61" y="61" width="478" height="478"/>
                                 <constraints>
                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="2Gj-MH-kwL"/>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="JN3-hv-JqZ"/>
@@ -56,61 +58,76 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUi-CH-SvC">
-                                <rect key="frame" x="264" y="562" width="72" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUi-CH-SvC">
+                                <rect key="frame" x="235" y="547" width="131" height="45"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZUi-CH-SvC" secondAttribute="height" multiplier="453:157" id="NQG-kL-vIU"/>
                                     <constraint firstAttribute="height" constant="30" id="dZh-rD-naz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="15"/>
-                                <state key="normal" title="Happy Meal">
+                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="18"/>
+                                <state key="normal" title="Happy Meal" backgroundImage="home_buttons.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="dZh-rD-naz"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="yIQ-EM-57i" kind="show" id="3cP-Pc-9nP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGY-0a-f39">
-                                <rect key="frame" x="344" y="562" width="57" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGY-0a-f39">
+                                <rect key="frame" x="374" y="547" width="124" height="45"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="mIG-Af-LX4"/>
+                                    <constraint firstAttribute="width" secondItem="jGY-0a-f39" secondAttribute="height" multiplier="433:157" id="lYs-ip-sjW"/>
+                                    <constraint firstAttribute="height" constant="45" id="mIG-Af-LX4"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="15"/>
-                                <state key="normal" title="My Notes">
+                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="18"/>
+                                <state key="normal" title="My Notes" backgroundImage="home_buttons.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
                                     <segue destination="DC4-Jx-TRf" kind="show" id="qAG-z1-8YG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoa-66-ePe">
-                                <rect key="frame" x="190" y="562" width="66" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoa-66-ePe">
+                                <rect key="frame" x="100" y="547" width="127" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FLm-mx-S20"/>
+                                    <constraint firstAttribute="width" secondItem="qoa-66-ePe" secondAttribute="height" multiplier="447:157" id="rGx-fX-2Dv"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="15"/>
-                                <state key="normal" title="My o'Clock">
+                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="18"/>
+                                <state key="normal" title="My o'Clock" backgroundImage="home_buttons.png">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FLm-mx-S20"/>
+                                    </mask>
+                                </variation>
                                 <connections>
                                     <segue destination="TMf-kQ-YeO" kind="show" id="8l4-ir-Z1s"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" red="0.30013808128322073" green="1" blue="0.61664387220129235" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.7449677586555481" green="0.8433651328086853" blue="0.86345869302749634" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="gtw-zj-vEV" secondAttribute="trailing" priority="750" constant="25" id="1TX-QD-XFS"/>
                             <constraint firstItem="jGY-0a-f39" firstAttribute="leading" secondItem="ZUi-CH-SvC" secondAttribute="trailing" constant="8" id="9jq-wK-mOn"/>
-                            <constraint firstItem="eCL-Lz-f66" firstAttribute="top" secondItem="gtw-zj-vEV" secondAttribute="bottom" constant="46" id="AWQ-Xo-Umu"/>
+                            <constraint firstItem="eCL-Lz-f66" firstAttribute="top" secondItem="gtw-zj-vEV" secondAttribute="bottom" priority="250" constant="61" id="AWQ-Xo-Umu"/>
+                            <constraint firstItem="jGY-0a-f39" firstAttribute="height" secondItem="ZUi-CH-SvC" secondAttribute="height" id="Ap1-SS-aBB"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gtw-zj-vEV" secondAttribute="bottom" id="JSG-nT-fAa"/>
                             <constraint firstAttribute="centerY" secondItem="gtw-zj-vEV" secondAttribute="centerY" id="K3L-Wy-xU4"/>
                             <constraint firstItem="eCL-Lz-f66" firstAttribute="top" secondItem="ZUi-CH-SvC" secondAttribute="bottom" constant="8" id="Lh9-A9-uZV"/>
-                            <constraint firstItem="gtw-zj-vEV" firstAttribute="top" secondItem="r1Y-9I-wBY" secondAttribute="top" constant="46" id="Rcn-F5-wD8"/>
-                            <constraint firstItem="gtw-zj-vEV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="r1Y-9I-wBY" secondAttribute="top" priority="750" constant="46" id="Ssm-YT-eYR"/>
+                            <constraint firstItem="gtw-zj-vEV" firstAttribute="top" secondItem="r1Y-9I-wBY" secondAttribute="top" priority="250" constant="61" id="Rcn-F5-wD8"/>
+                            <constraint firstItem="gtw-zj-vEV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="r1Y-9I-wBY" secondAttribute="top" constant="61" id="Ssm-YT-eYR"/>
                             <constraint firstItem="gtw-zj-vEV" firstAttribute="leading" secondItem="r1Y-9I-wBY" secondAttribute="leading" priority="750" constant="25" id="VWu-5x-nA5"/>
                             <constraint firstItem="gtw-zj-vEV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="r1Y-9I-wBY" secondAttribute="top" id="WXj-AP-Rv1"/>
-                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gtw-zj-vEV" secondAttribute="bottom" priority="750" constant="46" id="Xyh-2k-f7I"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="gtw-zj-vEV" secondAttribute="bottom" constant="61" id="Xyh-2k-f7I"/>
                             <constraint firstItem="eCL-Lz-f66" firstAttribute="top" secondItem="qoa-66-ePe" secondAttribute="bottom" constant="8" id="fva-LE-bBV"/>
                             <constraint firstItem="ZUi-CH-SvC" firstAttribute="leading" secondItem="qoa-66-ePe" secondAttribute="trailing" constant="8" id="kaN-xr-ziz"/>
+                            <constraint firstItem="jGY-0a-f39" firstAttribute="height" secondItem="qoa-66-ePe" secondAttribute="height" id="pGV-ed-svG"/>
                             <constraint firstAttribute="centerX" secondItem="gtw-zj-vEV" secondAttribute="centerX" id="rVd-L0-jlE"/>
                             <constraint firstAttribute="centerX" secondItem="ZUi-CH-SvC" secondAttribute="centerX" id="u5v-tC-sTD"/>
                             <constraint firstItem="gtw-zj-vEV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="r1Y-9I-wBY" secondAttribute="leading" constant="25" id="zUW-FB-RHO"/>
@@ -120,7 +137,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yae-mJ-LeX">
                         <barButtonItem key="backBarButtonItem" id="YbL-pA-yu8"/>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="0fX-bf-yX0">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="0fX-bf-yX0">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4ZK-sf-KaQ">
                                 <rect key="frame" x="362" y="452" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -150,7 +167,7 @@
                     <view key="view" contentMode="scaleToFill" id="83X-aY-66k">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.30013808130000003" green="1" blue="0.61664387220000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.7449677586555481" green="0.8433651328086853" blue="0.86345869302749634" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="My o'Clock" id="Q5w-6U-1j3"/>
                 </viewController>
@@ -169,7 +186,7 @@
                     <view key="view" contentMode="scaleToFill" id="S4A-rK-7cU">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.30013808130000003" green="1" blue="0.61664387220000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.7449677586555481" green="0.8433651328086853" blue="0.86345869302749634" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="My Notes" id="l3L-6P-hTb"/>
                 </viewController>
@@ -188,13 +205,87 @@
                     <view key="view" contentMode="scaleToFill" id="0Nq-tt-Jj4">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.30013808130000003" green="1" blue="0.61664387220000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Happy Meal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oRF-ds-Yx9">
+                                <rect key="frame" x="20" y="84" width="560" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="q10-9N-gU8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="34"/>
+                                <color key="textColor" name="alternateSelectedControlTextColor" catalog="System" colorSpace="catalog"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kDf-M2-hzV" customClass="RecipeTable" customModule="Kitchen_o_Clock">
+                                <rect key="frame" x="125" y="138" width="350" height="324"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="350" id="B2T-3c-Yni"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Recipe Cell" id="DjL-5h-eze" customClass="RecipeCell" customModule="Kitchen_o_Clock">
+                                        <rect key="frame" x="0.0" y="0.0" width="350" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="DjL-5h-eze" id="h7C-vW-pUc">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gzo-b6-Ee3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="350" height="43"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="43" id="u4i-It-OQA"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Gzo-b6-Ee3" firstAttribute="leading" secondItem="h7C-vW-pUc" secondAttribute="leading" id="2HE-jE-IsW"/>
+                                                <constraint firstItem="Gzo-b6-Ee3" firstAttribute="top" secondItem="h7C-vW-pUc" secondAttribute="top" id="2N4-nV-dsI"/>
+                                                <constraint firstAttribute="bottom" secondItem="Gzo-b6-Ee3" secondAttribute="bottom" id="9KD-cX-Uy3"/>
+                                                <constraint firstAttribute="trailing" secondItem="Gzo-b6-Ee3" secondAttribute="trailing" id="lhq-he-hfz"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="label" destination="Gzo-b6-Ee3" id="DxW-Fw-0CQ"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Yar-XJ-Pnr" id="3Id-2b-sSc"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O2-bb-NX2">
+                                <rect key="frame" x="279" y="109" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="0.89276909828186035" green="0.737540602684021" blue="0.52595406770706177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="oRF-ds-Yx9" firstAttribute="top" secondItem="w5e-Zf-rzT" secondAttribute="bottom" constant="20" id="2nC-sZ-ebG"/>
+                            <constraint firstAttribute="centerX" secondItem="oRF-ds-Yx9" secondAttribute="centerX" id="ATe-Je-KoC"/>
+                            <constraint firstItem="kDf-M2-hzV" firstAttribute="leading" secondItem="0Nq-tt-Jj4" secondAttribute="leading" priority="750" constant="20" id="Dlm-FG-oyV"/>
+                            <constraint firstAttribute="trailing" secondItem="kDf-M2-hzV" secondAttribute="trailing" priority="750" constant="20" id="FpI-Su-OSz"/>
+                            <constraint firstItem="kDf-M2-hzV" firstAttribute="top" secondItem="oRF-ds-Yx9" secondAttribute="bottom" constant="20" id="GPN-xu-LJf"/>
+                            <constraint firstAttribute="bottom" secondItem="kDf-M2-hzV" secondAttribute="bottom" priority="250" constant="138" id="O1a-oI-Eux"/>
+                            <constraint firstItem="oRF-ds-Yx9" firstAttribute="leading" secondItem="0Nq-tt-Jj4" secondAttribute="leading" constant="20" id="dpV-mp-7o8"/>
+                            <constraint firstAttribute="centerX" secondItem="kDf-M2-hzV" secondAttribute="centerX" id="n0B-K4-1cw"/>
+                            <constraint firstItem="nDp-Yg-xad" firstAttribute="top" secondItem="kDf-M2-hzV" secondAttribute="bottom" constant="270" id="nXx-JU-9iX"/>
+                            <constraint firstAttribute="trailing" secondItem="oRF-ds-Yx9" secondAttribute="trailing" constant="20" id="uf2-P9-lvC"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="nXx-JU-9iX"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Happy Meal" id="DZu-Bv-iZZ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fil-iE-3pf" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="Yar-XJ-Pnr" customClass="RecipesDataSource" customModule="Kitchen_o_Clock"/>
             </objects>
-            <point key="canvasLocation" x="232" y="1009"/>
+            <point key="canvasLocation" x="232" y="1143"/>
         </scene>
         <!--Settings-->
         <scene sceneID="XTx-fG-IDF">
@@ -215,7 +306,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.30013808130000003" green="1" blue="0.61664387220000005" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.7449677586555481" green="0.8433651328086853" blue="0.86345869302749634" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Settings" id="GXS-iG-Cs1"/>
                 </viewController>
@@ -225,6 +316,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="home_buttons.png" width="355" height="157"/>
         <image name="logo.png" width="954" height="1342"/>
         <image name="setting_button@3x.png" width="453" height="459"/>
     </resources>
