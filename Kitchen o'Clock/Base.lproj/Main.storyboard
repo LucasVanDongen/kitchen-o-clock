@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rwA-WL-j1R">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="rwA-WL-j1R">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
@@ -77,7 +77,7 @@
                                     <segue destination="yIQ-EM-57i" kind="show" id="3cP-Pc-9nP"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGY-0a-f39">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGY-0a-f39">
                                 <rect key="frame" x="374" y="547" width="124" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jGY-0a-f39" secondAttribute="height" multiplier="433:157" id="lYs-ip-sjW"/>
@@ -197,7 +197,7 @@
         <!--Happy Meal-->
         <scene sceneID="WVf-Or-aIa">
             <objects>
-                <viewController id="yIQ-EM-57i" sceneMemberID="viewController">
+                <viewController id="yIQ-EM-57i" customClass="RecipesController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w5e-Zf-rzT"/>
                         <viewControllerLayoutGuide type="bottom" id="nDp-Yg-xad"/>
