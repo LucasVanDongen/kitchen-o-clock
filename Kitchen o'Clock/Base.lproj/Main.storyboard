@@ -12,6 +12,7 @@
             <string>Bariol-Bold</string>
             <string>Bariol-Bold</string>
             <string>Bariol-Bold</string>
+            <string>Bariol-Bold</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -293,7 +294,7 @@
         <!--Meal-->
         <scene sceneID="fN0-gm-nt0">
             <objects>
-                <viewController id="xxV-b3-IWw" customClass="MealController" sceneMemberID="viewController">
+                <viewController id="xxV-b3-IWw" customClass="MealController" customModule="Kitchen_o_Clock" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8gM-qR-P0C"/>
                         <viewControllerLayoutGuide type="bottom" id="sBo-eM-ZCG"/>
@@ -301,9 +302,80 @@
                     <view key="view" contentMode="scaleToFill" id="Iac-uJ-ZNS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uz1-kX-FH9">
+                                <rect key="frame" x="60" y="120" width="480" height="360"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" priority="250" constant="600" id="gCX-wC-gPS"/>
+                                    <constraint firstAttribute="width" secondItem="uz1-kX-FH9" secondAttribute="height" multiplier="4:3" id="hxn-5N-ihJ"/>
+                                    <constraint firstAttribute="width" priority="250" constant="600" id="qb1-qa-Kfc"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEH-md-MDN" customClass="SlideInfo" customModule="Kitchen_o_Clock">
+                                <rect key="frame" x="0.0" y="64" width="269" height="68"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oven 200 C | 392 F, 20 minutes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFy-7F-n6D" customClass="InsetsLabel" customModule="Kitchen_o_Clock">
+                                        <rect key="frame" x="0.0" y="0.0" width="234" height="68"/>
+                                        <color key="backgroundColor" red="0.96351481958762886" green="0.72156862745098038" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="18"/>
+                                        <color key="textColor" red="0.31764705879999999" green="0.59607843140000005" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="labelInsetLeft">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="labelInsetRight">
+                                                <real key="value" value="5"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_slider.png" translatesAutoresizingMaskIntoConstraints="NO" id="KV6-ZJ-8a2">
+                                        <rect key="frame" x="234" y="0.0" width="35" height="68"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="35" id="Y1a-im-dVB"/>
+                                            <constraint firstAttribute="height" constant="68" id="wl4-bk-osJ"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="wFy-7F-n6D" firstAttribute="top" secondItem="tEH-md-MDN" secondAttribute="top" id="3Q5-R6-SgY"/>
+                                    <constraint firstAttribute="height" constant="68" id="3bx-Kv-LZK"/>
+                                    <constraint firstAttribute="trailing" secondItem="KV6-ZJ-8a2" secondAttribute="trailing" id="HxY-nx-RRt"/>
+                                    <constraint firstAttribute="bottom" secondItem="KV6-ZJ-8a2" secondAttribute="bottom" id="OVb-35-xwF"/>
+                                    <constraint firstItem="KV6-ZJ-8a2" firstAttribute="top" secondItem="tEH-md-MDN" secondAttribute="top" id="cxa-20-J9y"/>
+                                    <constraint firstItem="KV6-ZJ-8a2" firstAttribute="leading" secondItem="wFy-7F-n6D" secondAttribute="trailing" id="i2O-EG-53g"/>
+                                    <constraint firstItem="wFy-7F-n6D" firstAttribute="leading" secondItem="tEH-md-MDN" secondAttribute="leading" id="sDN-Ao-oAZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="wFy-7F-n6D" secondAttribute="bottom" id="wL8-w2-O8r"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="cookingInfo" destination="wFy-7F-n6D" id="plx-24-wiv"/>
+                                    <outlet property="dragTip" destination="KV6-ZJ-8a2" id="304-v8-G3d"/>
+                                </connections>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="tEH-md-MDN" secondAttribute="trailing" id="01W-uU-VEB"/>
+                            <constraint firstItem="tEH-md-MDN" firstAttribute="top" secondItem="8gM-qR-P0C" secondAttribute="bottom" id="EtR-Ed-BGf"/>
+                            <constraint firstItem="uz1-kX-FH9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Iac-uJ-ZNS" secondAttribute="leading" constant="60" id="HwS-fn-YAH"/>
+                            <constraint firstItem="uz1-kX-FH9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Iac-uJ-ZNS" secondAttribute="top" constant="120" id="NvX-ZQ-iqg"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uz1-kX-FH9" secondAttribute="trailing" constant="60" id="dvy-5F-Dwr"/>
+                            <constraint firstItem="tEH-md-MDN" firstAttribute="leading" secondItem="Iac-uJ-ZNS" secondAttribute="leading" id="efH-ws-IOt"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uz1-kX-FH9" secondAttribute="bottom" constant="120" id="lT5-yG-rsG"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="01W-uU-VEB"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Meal" id="5PV-j8-NS8"/>
+                    <connections>
+                        <outlet property="image" destination="uz1-kX-FH9" id="OqA-7m-rPO"/>
+                        <outlet property="imageRatio" destination="hxn-5N-ihJ" id="RcS-Rm-Cf4"/>
+                        <outlet property="slideInfo" destination="tEH-md-MDN" id="SaP-ti-nib"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FxM-gP-cNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -339,6 +411,7 @@
     </scenes>
     <resources>
         <image name="home_buttons.png" width="355" height="157"/>
+        <image name="information_slider.png" width="104" height="202"/>
         <image name="logo.png" width="954" height="1342"/>
         <image name="setting_button@3x.png" width="453" height="459"/>
     </resources>

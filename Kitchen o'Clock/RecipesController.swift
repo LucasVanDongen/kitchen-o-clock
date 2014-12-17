@@ -18,7 +18,7 @@ public class RecipesController: UIViewController, RecipeSelectedProtocol {
     }
     
     override public func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.description != "toMeal") {
+        if (segue.identifier != "toMeal") {
             return;
         }
         
