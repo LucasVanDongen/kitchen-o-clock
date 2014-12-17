@@ -306,25 +306,29 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEH-md-MDN" customClass="SlideInfo" customModule="Kitchen_o_Clock">
-                                <rect key="frame" x="0.0" y="64" width="269" height="68"/>
+                                <rect key="frame" x="0.0" y="72" width="285" height="68"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oven 200 C | 392 F, 20 minutes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFy-7F-n6D" customClass="InsetsLabel" customModule="Kitchen_o_Clock">
-                                        <rect key="frame" x="0.0" y="0.0" width="234" height="68"/>
-                                        <color key="backgroundColor" red="0.96351481958762886" green="0.72156862745098038" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="18"/>
-                                        <color key="textColor" red="0.31764705879999999" green="0.59607843140000005" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="labelInsetLeft">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                            <userDefinedRuntimeAttribute type="number" keyPath="labelInsetRight">
-                                                <real key="value" value="5"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88l-qS-7yg">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="68"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Oven 200 C | 392 F, 20 minutes" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFy-7F-n6D">
+                                                <rect key="frame" x="8" y="0.0" width="234" height="68"/>
+                                                <color key="backgroundColor" red="0.96351481958762886" green="0.72156862745098038" blue="0.69411764705882351" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="18"/>
+                                                <color key="textColor" red="0.31764705879999999" green="0.59607843140000005" blue="0.52941176469999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.96351481959999996" green="0.72156862749999995" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="wFy-7F-n6D" firstAttribute="top" secondItem="88l-qS-7yg" secondAttribute="top" id="OJx-QR-4Ac"/>
+                                            <constraint firstAttribute="bottom" secondItem="wFy-7F-n6D" secondAttribute="bottom" id="YBo-4F-6YX"/>
+                                            <constraint firstAttribute="trailing" secondItem="wFy-7F-n6D" secondAttribute="trailing" constant="8" id="ZIF-Ny-zH7"/>
+                                            <constraint firstItem="wFy-7F-n6D" firstAttribute="leading" secondItem="88l-qS-7yg" secondAttribute="leading" constant="8" id="aJJ-X2-V5h"/>
+                                        </constraints>
+                                    </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_slider.png" translatesAutoresizingMaskIntoConstraints="NO" id="KV6-ZJ-8a2">
-                                        <rect key="frame" x="234" y="0.0" width="35" height="68"/>
+                                        <rect key="frame" x="250" y="0.0" width="35" height="68"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="Y1a-im-dVB"/>
                                             <constraint firstAttribute="height" constant="68" id="wl4-bk-osJ"/>
@@ -333,14 +337,14 @@
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="wFy-7F-n6D" firstAttribute="top" secondItem="tEH-md-MDN" secondAttribute="top" id="3Q5-R6-SgY"/>
+                                    <constraint firstItem="88l-qS-7yg" firstAttribute="leading" secondItem="tEH-md-MDN" secondAttribute="leading" id="1fU-nD-WNr"/>
                                     <constraint firstAttribute="height" constant="68" id="3bx-Kv-LZK"/>
                                     <constraint firstAttribute="trailing" secondItem="KV6-ZJ-8a2" secondAttribute="trailing" id="HxY-nx-RRt"/>
                                     <constraint firstAttribute="bottom" secondItem="KV6-ZJ-8a2" secondAttribute="bottom" id="OVb-35-xwF"/>
+                                    <constraint firstItem="88l-qS-7yg" firstAttribute="top" secondItem="tEH-md-MDN" secondAttribute="top" id="ZDw-1u-j5S"/>
+                                    <constraint firstAttribute="bottom" secondItem="88l-qS-7yg" secondAttribute="bottom" id="ZTD-GO-ORb"/>
+                                    <constraint firstItem="KV6-ZJ-8a2" firstAttribute="leading" secondItem="88l-qS-7yg" secondAttribute="trailing" id="Zfk-cU-f3v"/>
                                     <constraint firstItem="KV6-ZJ-8a2" firstAttribute="top" secondItem="tEH-md-MDN" secondAttribute="top" id="cxa-20-J9y"/>
-                                    <constraint firstItem="KV6-ZJ-8a2" firstAttribute="leading" secondItem="wFy-7F-n6D" secondAttribute="trailing" id="i2O-EG-53g"/>
-                                    <constraint firstItem="wFy-7F-n6D" firstAttribute="leading" secondItem="tEH-md-MDN" secondAttribute="leading" id="sDN-Ao-oAZ"/>
-                                    <constraint firstAttribute="bottom" secondItem="wFy-7F-n6D" secondAttribute="bottom" id="wL8-w2-O8r"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="cookingInfo" destination="wFy-7F-n6D" id="plx-24-wiv"/>
@@ -351,7 +355,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="tEH-md-MDN" secondAttribute="trailing" id="01W-uU-VEB"/>
-                            <constraint firstItem="tEH-md-MDN" firstAttribute="top" secondItem="8gM-qR-P0C" secondAttribute="bottom" id="EtR-Ed-BGf"/>
+                            <constraint firstItem="tEH-md-MDN" firstAttribute="top" secondItem="8gM-qR-P0C" secondAttribute="bottom" constant="8" id="EtR-Ed-BGf"/>
                             <constraint firstItem="uz1-kX-FH9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Iac-uJ-ZNS" secondAttribute="leading" constant="60" id="HwS-fn-YAH"/>
                             <constraint firstItem="uz1-kX-FH9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Iac-uJ-ZNS" secondAttribute="top" constant="120" id="NvX-ZQ-iqg"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uz1-kX-FH9" secondAttribute="trailing" constant="60" id="dvy-5F-Dwr"/>
