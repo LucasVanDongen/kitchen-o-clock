@@ -8,16 +8,18 @@
 
 import UIKit
 
-class Recipe: NSObject {
+public class Recipe: NSObject {
     var name: String
     var cookingInfo: String
     var secondsToPrepare: UInt
     var color: UIColor
+    var imageName: String
     
     init(name: String, cookingInfo: String, secondsToPrepare: UInt, color: UIColor, imageName: String) {
         self.name = name
         self.cookingInfo = cookingInfo
         self.secondsToPrepare = secondsToPrepare
         self.color = color
+        self.imageName = imageName
     }
 }

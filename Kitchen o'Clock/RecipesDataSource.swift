@@ -8,8 +8,9 @@
 
 import UIKit
 
-class RecipesDataSource: NSObject, UITableViewDataSource {
+class RecipesDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     let recipes: Recipes = Recipes()
+    @IBOutlet weak var delegate: RecipesController?
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return recipes.recipes.count
@@ -22,5 +23,15 @@ class RecipesDataSource: NSObject, UITableViewDataSource {
         cell.configureWithName(recipe.name, color: recipe.color)
         
         return cell
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if (self.delegate == nil) {
+            return
+        }
+        
+        let recipe: Recipe = self.recipes.recipes[indexPath.row]
+        let controller: RecipesController = self.delegate! as RecipesController
+        controller.recipeSelected(recipe)
     }
 }

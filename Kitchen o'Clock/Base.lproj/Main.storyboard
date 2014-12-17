@@ -58,8 +58,8 @@
                                     </mask>
                                 </variation>
                             </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUi-CH-SvC">
-                                <rect key="frame" x="235" y="547" width="131" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUi-CH-SvC">
+                                <rect key="frame" x="235" y="547" width="130" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="ZUi-CH-SvC" secondAttribute="height" multiplier="453:157" id="NQG-kL-vIU"/>
                                     <constraint firstAttribute="height" constant="30" id="dZh-rD-naz"/>
@@ -78,7 +78,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jGY-0a-f39">
-                                <rect key="frame" x="374" y="547" width="124" height="45"/>
+                                <rect key="frame" x="373" y="547" width="124" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="jGY-0a-f39" secondAttribute="height" multiplier="433:157" id="lYs-ip-sjW"/>
                                     <constraint firstAttribute="height" constant="45" id="mIG-Af-LX4"/>
@@ -91,8 +91,8 @@
                                     <segue destination="DC4-Jx-TRf" kind="show" id="qAG-z1-8YG"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoa-66-ePe">
-                                <rect key="frame" x="100" y="547" width="127" height="45"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoa-66-ePe">
+                                <rect key="frame" x="99" y="547" width="128" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="FLm-mx-S20"/>
                                     <constraint firstAttribute="width" secondItem="qoa-66-ePe" secondAttribute="height" multiplier="447:157" id="rGx-fX-2Dv"/>
@@ -137,7 +137,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="Yae-mJ-LeX">
                         <barButtonItem key="backBarButtonItem" id="YbL-pA-yu8"/>
-                        <barButtonItem key="rightBarButtonItem" title="Item" style="plain" id="0fX-bf-yX0">
+                        <barButtonItem key="rightBarButtonItem" title="Item" style="done" id="0fX-bf-yX0">
                             <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4ZK-sf-KaQ">
                                 <rect key="frame" x="362" y="452" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -148,6 +148,7 @@
                                     <segue destination="Ukc-Zj-Snl" kind="show" id="wdm-Rd-TdC"/>
                                 </connections>
                             </button>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
@@ -197,7 +198,7 @@
         <!--Happy Meal-->
         <scene sceneID="WVf-Or-aIa">
             <objects>
-                <viewController id="yIQ-EM-57i" customClass="RecipesController" sceneMemberID="viewController">
+                <viewController id="yIQ-EM-57i" customClass="RecipesController" customModule="Kitchen_o_Clock" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="w5e-Zf-rzT"/>
                         <viewControllerLayoutGuide type="bottom" id="nDp-Yg-xad"/>
@@ -252,14 +253,9 @@
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="Yar-XJ-Pnr" id="3Id-2b-sSc"/>
+                                    <outlet property="delegate" destination="Yar-XJ-Pnr" id="Mnc-GV-TpC"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0O2-bb-NX2">
-                                <rect key="frame" x="279" y="109" width="42" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.89276909828186035" green="0.737540602684021" blue="0.52595406770706177" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -281,11 +277,37 @@
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Happy Meal" id="DZu-Bv-iZZ"/>
+                    <connections>
+                        <segue destination="xxV-b3-IWw" kind="show" identifier="toMeal" id="YaX-qe-9xj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Fil-iE-3pf" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="Yar-XJ-Pnr" customClass="RecipesDataSource" customModule="Kitchen_o_Clock"/>
+                <customObject id="Yar-XJ-Pnr" customClass="RecipesDataSource" customModule="Kitchen_o_Clock">
+                    <connections>
+                        <outlet property="delegate" destination="yIQ-EM-57i" id="6gg-AL-A1W"/>
+                    </connections>
+                </customObject>
             </objects>
             <point key="canvasLocation" x="232" y="1143"/>
+        </scene>
+        <!--Meal-->
+        <scene sceneID="fN0-gm-nt0">
+            <objects>
+                <viewController id="xxV-b3-IWw" customClass="MealController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="8gM-qR-P0C"/>
+                        <viewControllerLayoutGuide type="bottom" id="sBo-eM-ZCG"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Iac-uJ-ZNS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Meal" id="5PV-j8-NS8"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FxM-gP-cNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="232" y="1949"/>
         </scene>
         <!--Settings-->
         <scene sceneID="XTx-fG-IDF">
