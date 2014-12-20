@@ -53,5 +53,4 @@ class MealController: UIViewController {
         
         self.view.addConstraint(self.imageRatio!)
     }
-
 }

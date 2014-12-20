@@ -212,11 +212,12 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="kDf-M2-hzV" customClass="RecipeTable" customModule="Kitchen_o_Clock">
-                                <rect key="frame" x="125" y="138" width="350" height="324"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <rect key="frame" x="125" y="138" width="350" height="442"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="350" id="B2T-3c-Yni"/>
                                 </constraints>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Recipe Cell" id="DjL-5h-eze" customClass="RecipeCell" customModule="Kitchen_o_Clock">
                                         <rect key="frame" x="0.0" y="0.0" width="350" height="44"/>
@@ -260,6 +261,7 @@
                             <constraint firstAttribute="trailing" secondItem="kDf-M2-hzV" secondAttribute="trailing" priority="750" constant="20" id="FpI-Su-OSz"/>
                             <constraint firstItem="kDf-M2-hzV" firstAttribute="top" secondItem="oRF-ds-Yx9" secondAttribute="bottom" constant="20" id="GPN-xu-LJf"/>
                             <constraint firstAttribute="bottom" secondItem="kDf-M2-hzV" secondAttribute="bottom" priority="250" constant="138" id="O1a-oI-Eux"/>
+                            <constraint firstItem="nDp-Yg-xad" firstAttribute="top" secondItem="kDf-M2-hzV" secondAttribute="bottom" constant="20" id="bhp-e1-RdQ"/>
                             <constraint firstItem="oRF-ds-Yx9" firstAttribute="leading" secondItem="0Nq-tt-Jj4" secondAttribute="leading" constant="20" id="dpV-mp-7o8"/>
                             <constraint firstAttribute="centerX" secondItem="kDf-M2-hzV" secondAttribute="centerX" id="n0B-K4-1cw"/>
                             <constraint firstItem="nDp-Yg-xad" firstAttribute="top" secondItem="kDf-M2-hzV" secondAttribute="bottom" constant="270" id="nXx-JU-9iX"/>
@@ -267,6 +269,7 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="O1a-oI-Eux"/>
                                 <exclude reference="nXx-JU-9iX"/>
                             </mask>
                         </variation>
@@ -293,7 +296,7 @@
                         <viewControllerLayoutGuide type="top" id="8gM-qR-P0C"/>
                         <viewControllerLayoutGuide type="bottom" id="sBo-eM-ZCG"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="Iac-uJ-ZNS">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="Iac-uJ-ZNS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -306,7 +309,7 @@
                                 </constraints>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEH-md-MDN" customClass="SlideInfo" customModule="Kitchen_o_Clock">
-                                <rect key="frame" x="0.0" y="72" width="285" height="68"/>
+                                <rect key="frame" x="-250" y="72" width="285" height="68"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="88l-qS-7yg">
                                         <rect key="frame" x="0.0" y="0.0" width="250" height="68"/>
@@ -321,52 +324,53 @@
                                         </subviews>
                                         <color key="backgroundColor" red="0.96351481959999996" green="0.72156862749999995" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstItem="wFy-7F-n6D" firstAttribute="top" secondItem="88l-qS-7yg" secondAttribute="top" id="OJx-QR-4Ac"/>
-                                            <constraint firstAttribute="bottom" secondItem="wFy-7F-n6D" secondAttribute="bottom" id="YBo-4F-6YX"/>
-                                            <constraint firstAttribute="trailing" secondItem="wFy-7F-n6D" secondAttribute="trailing" constant="8" id="ZIF-Ny-zH7"/>
-                                            <constraint firstItem="wFy-7F-n6D" firstAttribute="leading" secondItem="88l-qS-7yg" secondAttribute="leading" constant="8" id="aJJ-X2-V5h"/>
+                                            <constraint firstAttribute="trailing" secondItem="wFy-7F-n6D" secondAttribute="trailing" priority="250" constant="8" id="3Pr-O2-8mr"/>
+                                            <constraint firstAttribute="bottom" secondItem="wFy-7F-n6D" secondAttribute="bottom" id="5pb-cL-py8"/>
+                                            <constraint firstItem="wFy-7F-n6D" firstAttribute="leading" secondItem="88l-qS-7yg" secondAttribute="leading" constant="8" id="guK-bM-gq5"/>
+                                            <constraint firstItem="wFy-7F-n6D" firstAttribute="top" secondItem="88l-qS-7yg" secondAttribute="top" id="m77-hw-MQ3"/>
                                         </constraints>
                                     </view>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="information_slider.png" translatesAutoresizingMaskIntoConstraints="NO" id="KV6-ZJ-8a2">
                                         <rect key="frame" x="250" y="0.0" width="35" height="68"/>
+                                        <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="35" id="Y1a-im-dVB"/>
                                             <constraint firstAttribute="height" constant="68" id="wl4-bk-osJ"/>
                                         </constraints>
+                                        <connections>
+                                            <outletCollection property="gestureRecognizers" destination="Fc8-Z7-HnN" appends="YES" id="nw4-Wf-c4k"/>
+                                        </connections>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="88l-qS-7yg" firstAttribute="leading" secondItem="tEH-md-MDN" secondAttribute="leading" id="1fU-nD-WNr"/>
                                     <constraint firstAttribute="height" constant="68" id="3bx-Kv-LZK"/>
-                                    <constraint firstAttribute="trailing" secondItem="KV6-ZJ-8a2" secondAttribute="trailing" id="HxY-nx-RRt"/>
-                                    <constraint firstAttribute="bottom" secondItem="KV6-ZJ-8a2" secondAttribute="bottom" id="OVb-35-xwF"/>
-                                    <constraint firstItem="88l-qS-7yg" firstAttribute="top" secondItem="tEH-md-MDN" secondAttribute="top" id="ZDw-1u-j5S"/>
-                                    <constraint firstAttribute="bottom" secondItem="88l-qS-7yg" secondAttribute="bottom" id="ZTD-GO-ORb"/>
-                                    <constraint firstItem="KV6-ZJ-8a2" firstAttribute="leading" secondItem="88l-qS-7yg" secondAttribute="trailing" id="Zfk-cU-f3v"/>
-                                    <constraint firstItem="KV6-ZJ-8a2" firstAttribute="top" secondItem="tEH-md-MDN" secondAttribute="top" id="cxa-20-J9y"/>
+                                    <constraint firstAttribute="bottom" secondItem="88l-qS-7yg" secondAttribute="bottom" id="4UP-rd-DE8"/>
+                                    <constraint firstItem="88l-qS-7yg" firstAttribute="leading" secondItem="tEH-md-MDN" secondAttribute="leading" id="7c7-V8-5MV"/>
+                                    <constraint firstItem="KV6-ZJ-8a2" firstAttribute="leading" secondItem="88l-qS-7yg" secondAttribute="trailing" id="Ad9-oc-JCk"/>
+                                    <constraint firstItem="KV6-ZJ-8a2" firstAttribute="top" secondItem="tEH-md-MDN" secondAttribute="top" id="GUr-OD-ZvT"/>
+                                    <constraint firstItem="88l-qS-7yg" firstAttribute="top" secondItem="tEH-md-MDN" secondAttribute="top" id="QmL-iY-65u"/>
+                                    <constraint firstAttribute="bottom" secondItem="KV6-ZJ-8a2" secondAttribute="bottom" id="acf-dh-xLd"/>
+                                    <constraint firstAttribute="trailing" secondItem="KV6-ZJ-8a2" secondAttribute="trailing" id="pPD-Iy-vow"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="cookingInfo" destination="wFy-7F-n6D" id="plx-24-wiv"/>
                                     <outlet property="dragTip" destination="KV6-ZJ-8a2" id="304-v8-G3d"/>
+                                    <outlet property="tabSnapsToSide" destination="HjZ-pJ-YUv" id="hrF-vc-sJe"/>
+                                    <outlet property="textSnapsToSide" destination="efH-ws-IOt" id="TiG-pG-e3a"/>
                                 </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="tEH-md-MDN" secondAttribute="trailing" id="01W-uU-VEB"/>
-                            <constraint firstItem="tEH-md-MDN" firstAttribute="top" secondItem="8gM-qR-P0C" secondAttribute="bottom" constant="8" id="EtR-Ed-BGf"/>
+                            <constraint firstItem="tEH-md-MDN" firstAttribute="trailing" secondItem="Iac-uJ-ZNS" secondAttribute="leading" priority="900" constant="35" id="HjZ-pJ-YUv" userLabel="Tab snaps to side"/>
                             <constraint firstItem="uz1-kX-FH9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Iac-uJ-ZNS" secondAttribute="leading" constant="60" id="HwS-fn-YAH"/>
                             <constraint firstItem="uz1-kX-FH9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Iac-uJ-ZNS" secondAttribute="top" constant="120" id="NvX-ZQ-iqg"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uz1-kX-FH9" secondAttribute="trailing" constant="60" id="dvy-5F-Dwr"/>
-                            <constraint firstItem="tEH-md-MDN" firstAttribute="leading" secondItem="Iac-uJ-ZNS" secondAttribute="leading" id="efH-ws-IOt"/>
+                            <constraint firstItem="tEH-md-MDN" firstAttribute="leading" secondItem="Iac-uJ-ZNS" secondAttribute="leading" priority="100" id="efH-ws-IOt" userLabel="Text snaps to side"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uz1-kX-FH9" secondAttribute="bottom" constant="120" id="lT5-yG-rsG"/>
+                            <constraint firstItem="tEH-md-MDN" firstAttribute="top" secondItem="8gM-qR-P0C" secondAttribute="bottom" constant="8" id="tbE-TN-Zbo"/>
                         </constraints>
-                        <variation key="default">
-                            <mask key="constraints">
-                                <exclude reference="01W-uU-VEB"/>
-                            </mask>
-                        </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Meal" id="5PV-j8-NS8"/>
                     <connections>
@@ -376,6 +380,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FxM-gP-cNl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Fc8-Z7-HnN">
+                    <connections>
+                        <outlet property="delegate" destination="tEH-md-MDN" id="ffl-el-xtP"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="232" y="1949"/>
         </scene>
