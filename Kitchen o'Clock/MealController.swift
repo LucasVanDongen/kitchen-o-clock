@@ -29,6 +29,7 @@ class MealController: UIViewController {
         
         let setRecipe: Recipe = recipe!
         self.setImage(setRecipe.imageName)
+        self.timer?.setTime(self.recipe!.secondsToPrepare)
         self.view.backgroundColor = setRecipe.color
         self.slideInfo?.cookingInfo!.text = setRecipe.cookingInfo
     }
