@@ -3,9 +3,12 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <customFonts key="customFonts">
         <mutableArray key="Bariol_Bold.otf">
+            <string>Bariol-Bold</string>
+            <string>Bariol-Bold</string>
             <string>Bariol-Bold</string>
             <string>Bariol-Bold</string>
             <string>Bariol-Bold</string>
@@ -51,6 +54,25 @@
                                     <constraint firstAttribute="width" secondItem="gtw-zj-vEV" secondAttribute="height" multiplier="1:1" id="s5r-8S-BpS"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoa-66-ePe">
+                                <rect key="frame" x="99" y="547" width="128" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="FLm-mx-S20"/>
+                                    <constraint firstAttribute="width" secondItem="qoa-66-ePe" secondAttribute="height" multiplier="447:157" id="rGx-fX-2Dv"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="18"/>
+                                <state key="normal" title="My o'Clock" backgroundImage="home_buttons.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="FLm-mx-S20"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="TMf-kQ-YeO" kind="show" id="8l4-ir-Z1s"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZUi-CH-SvC">
                                 <rect key="frame" x="235" y="547" width="130" height="45"/>
                                 <constraints>
@@ -82,25 +104,6 @@
                                 </state>
                                 <connections>
                                     <segue destination="DC4-Jx-TRf" kind="show" id="qAG-z1-8YG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qoa-66-ePe">
-                                <rect key="frame" x="99" y="547" width="128" height="45"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="FLm-mx-S20"/>
-                                    <constraint firstAttribute="width" secondItem="qoa-66-ePe" secondAttribute="height" multiplier="447:157" id="rGx-fX-2Dv"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="18"/>
-                                <state key="normal" title="My o'Clock" backgroundImage="home_buttons.png">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <variation key="default">
-                                    <mask key="constraints">
-                                        <exclude reference="FLm-mx-S20"/>
-                                    </mask>
-                                </variation>
-                                <connections>
-                                    <segue destination="TMf-kQ-YeO" kind="show" id="8l4-ir-Z1s"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -307,6 +310,12 @@
                                     <constraint firstAttribute="width" secondItem="uz1-kX-FH9" secondAttribute="height" multiplier="4:3" id="hxn-5N-ihJ"/>
                                     <constraint firstAttribute="width" priority="250" constant="600" id="qb1-qa-Kfc"/>
                                 </constraints>
+                                <variation key="heightClass=compact-widthClass=regular" ambiguous="YES" misplaced="YES">
+                                    <rect key="frame" x="60" y="120" width="213.5" height="160"/>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact" ambiguous="YES">
+                                    <rect key="frame" x="60" y="470" width="280" height="210"/>
+                                </variation>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tEH-md-MDN" customClass="SlideInfo" customModule="Kitchen_o_Clock">
                                 <rect key="frame" x="-250" y="72" width="285" height="68"/>
@@ -360,16 +369,82 @@
                                     <outlet property="textSnapsToSide" destination="efH-ws-IOt" id="TiG-pG-e3a"/>
                                 </connections>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T91-Qd-Pj0">
+                                <rect key="frame" x="165" y="547" width="129.5" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="T91-Qd-Pj0" secondAttribute="height" multiplier="453:157" id="99I-to-bBE"/>
+                                    <constraint firstAttribute="height" constant="30" id="Gnp-Oc-Y4R"/>
+                                    <constraint firstAttribute="height" priority="250" constant="45" id="OCx-a5-zhd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="18"/>
+                                <state key="normal" title="Start :)" backgroundImage="red_button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Gnp-Oc-Y4R"/>
+                                    </mask>
+                                </variation>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dA7-CD-413">
+                                <rect key="frame" x="311" y="547" width="124" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dA7-CD-413" secondAttribute="height" multiplier="433:157" id="3dG-pS-QEw"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="45" id="ATb-lh-Qqe"/>
+                                    <constraint firstAttribute="height" priority="250" constant="45" id="Vjv-ua-b68"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Bariol-Bold" family="Bariol" pointSize="18"/>
+                                <state key="normal" title="Pause :/" backgroundImage="red_button.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6ez-hu-JL0">
+                                <rect key="frame" x="294.5" y="538" width="16.5" height="54"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="22" id="8Fw-BO-Ihm"/>
+                                    <constraint firstAttribute="height" constant="54" id="hGH-Lb-Zgt"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="8" id="hL6-ZE-IKi"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rTq-Sn-I3u">
+                                <rect key="frame" x="435" y="537" width="165" height="55"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="EQC-af-h5U"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ECB-wM-EBI">
+                                <rect key="frame" x="0.0" y="537" width="165" height="55"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="Cnt-aS-Qab"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="rTq-Sn-I3u" secondAttribute="trailing" id="5aS-nK-AHf"/>
+                            <constraint firstItem="6ez-hu-JL0" firstAttribute="width" secondItem="ECB-wM-EBI" secondAttribute="width" multiplier="0.1" priority="250" id="6P6-bG-uFX"/>
+                            <constraint firstItem="sBo-eM-ZCG" firstAttribute="top" secondItem="T91-Qd-Pj0" secondAttribute="bottom" constant="8" id="9gz-Ab-ImH"/>
+                            <constraint firstItem="sBo-eM-ZCG" firstAttribute="top" secondItem="rTq-Sn-I3u" secondAttribute="bottom" constant="8" id="Cg0-Dr-5SJ"/>
                             <constraint firstItem="tEH-md-MDN" firstAttribute="trailing" secondItem="Iac-uJ-ZNS" secondAttribute="leading" priority="900" constant="35" id="HjZ-pJ-YUv" userLabel="Tab snaps to side"/>
                             <constraint firstItem="uz1-kX-FH9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Iac-uJ-ZNS" secondAttribute="leading" constant="60" id="HwS-fn-YAH"/>
+                            <constraint firstItem="T91-Qd-Pj0" firstAttribute="leading" secondItem="ECB-wM-EBI" secondAttribute="trailing" id="JD7-PX-Lo0"/>
                             <constraint firstItem="uz1-kX-FH9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Iac-uJ-ZNS" secondAttribute="top" constant="120" id="NvX-ZQ-iqg"/>
+                            <constraint firstItem="6ez-hu-JL0" firstAttribute="leading" secondItem="T91-Qd-Pj0" secondAttribute="trailing" id="TXm-4e-Cuw"/>
+                            <constraint firstItem="dA7-CD-413" firstAttribute="leading" secondItem="6ez-hu-JL0" secondAttribute="trailing" id="Wlr-mc-kGl"/>
+                            <constraint firstItem="dA7-CD-413" firstAttribute="height" secondItem="T91-Qd-Pj0" secondAttribute="height" id="XS6-5P-zDw"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uz1-kX-FH9" secondAttribute="trailing" constant="60" id="dvy-5F-Dwr"/>
                             <constraint firstItem="tEH-md-MDN" firstAttribute="leading" secondItem="Iac-uJ-ZNS" secondAttribute="leading" priority="100" id="efH-ws-IOt" userLabel="Text snaps to side"/>
+                            <constraint firstItem="ECB-wM-EBI" firstAttribute="leading" secondItem="Iac-uJ-ZNS" secondAttribute="leading" id="ijl-fj-tnw"/>
+                            <constraint firstItem="sBo-eM-ZCG" firstAttribute="top" secondItem="dA7-CD-413" secondAttribute="bottom" constant="8" id="jXr-7b-PC9"/>
                             <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="uz1-kX-FH9" secondAttribute="bottom" constant="120" id="lT5-yG-rsG"/>
+                            <constraint firstItem="rTq-Sn-I3u" firstAttribute="leading" secondItem="dA7-CD-413" secondAttribute="trailing" id="qgz-xb-iKW"/>
+                            <constraint firstItem="sBo-eM-ZCG" firstAttribute="top" secondItem="ECB-wM-EBI" secondAttribute="bottom" constant="8" id="t5o-pd-NwV"/>
+                            <constraint firstItem="rTq-Sn-I3u" firstAttribute="width" secondItem="ECB-wM-EBI" secondAttribute="width" id="tQa-WN-PPd"/>
                             <constraint firstItem="tEH-md-MDN" firstAttribute="top" secondItem="8gM-qR-P0C" secondAttribute="bottom" constant="8" id="tbE-TN-Zbo"/>
+                            <constraint firstItem="sBo-eM-ZCG" firstAttribute="top" secondItem="6ez-hu-JL0" secondAttribute="bottom" constant="8" id="yYw-7U-FVt"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Meal" id="5PV-j8-NS8"/>
@@ -420,6 +495,7 @@
         <image name="home_buttons.png" width="355" height="157"/>
         <image name="information_slider.png" width="104" height="202"/>
         <image name="logo.png" width="954" height="1342"/>
+        <image name="red_button.png" width="354" height="157"/>
         <image name="setting_button@3x.png" width="453" height="459"/>
     </resources>
 </document>
