@@ -14,11 +14,16 @@ class MealController: UIViewController {
 
     @IBOutlet var image: UIImageView?
     @IBOutlet var slideInfo: SlideInfo?
+    @IBOutlet var timer: TimerLabel?
+    @IBOutlet var startButton: UIButton?
+    @IBOutlet var pauseButton: UIButton?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        self.pauseButton?.enabled = false
         if (self.recipe == nil) {
+            self.startButton?.enabled = false
             return
         }
         
@@ -39,5 +44,15 @@ class MealController: UIViewController {
         }
 
         self.image?.image = recipeImage
+    }
+    
+    @IBAction func startTapped(sender: UIButton) {
+        self.startButton?.enabled = false
+        self.pauseButton?.enabled = true
+    }
+    
+    @IBAction func pauseTapped(sender: UIButton) {
+        self.startButton?.enabled = true
+        self.pauseButton?.enabled = false
     }
 }
