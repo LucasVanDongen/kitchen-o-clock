@@ -219,7 +219,7 @@
                                 <rect key="frame" x="125" y="138" width="350" height="442"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="350" id="B2T-3c-Yni"/>
+                                    <constraint firstAttribute="width" priority="250" constant="350" id="B2T-3c-Yni"/>
                                 </constraints>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -261,8 +261,8 @@
                         <constraints>
                             <constraint firstItem="oRF-ds-Yx9" firstAttribute="top" secondItem="w5e-Zf-rzT" secondAttribute="bottom" constant="20" id="2nC-sZ-ebG"/>
                             <constraint firstAttribute="centerX" secondItem="oRF-ds-Yx9" secondAttribute="centerX" id="ATe-Je-KoC"/>
-                            <constraint firstItem="kDf-M2-hzV" firstAttribute="leading" secondItem="0Nq-tt-Jj4" secondAttribute="leading" priority="750" constant="20" id="Dlm-FG-oyV"/>
-                            <constraint firstAttribute="trailing" secondItem="kDf-M2-hzV" secondAttribute="trailing" priority="750" constant="20" id="FpI-Su-OSz"/>
+                            <constraint firstItem="kDf-M2-hzV" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="0Nq-tt-Jj4" secondAttribute="leading" priority="750" constant="20" id="Dlm-FG-oyV"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="kDf-M2-hzV" secondAttribute="trailing" priority="750" constant="20" id="FpI-Su-OSz"/>
                             <constraint firstItem="kDf-M2-hzV" firstAttribute="top" secondItem="oRF-ds-Yx9" secondAttribute="bottom" constant="20" id="GPN-xu-LJf"/>
                             <constraint firstAttribute="bottom" secondItem="kDf-M2-hzV" secondAttribute="bottom" priority="250" constant="138" id="O1a-oI-Eux"/>
                             <constraint firstItem="nDp-Yg-xad" firstAttribute="top" secondItem="kDf-M2-hzV" secondAttribute="bottom" constant="20" id="bhp-e1-RdQ"/>
