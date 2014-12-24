@@ -494,7 +494,7 @@
                         <outlet property="pauseButton" destination="dA7-CD-413" id="8gW-vV-llr"/>
                         <outlet property="slideInfo" destination="tEH-md-MDN" id="SaP-ti-nib"/>
                         <outlet property="startButton" destination="T91-Qd-Pj0" id="ivn-Ws-yAB"/>
-                        <outlet property="timer" destination="Ph8-8H-W3l" id="z0E-wU-NdQ"/>
+                        <outlet property="timeLeft" destination="Ph8-8H-W3l" id="IGh-Kc-7IC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FxM-gP-cNl" userLabel="First Responder" sceneMemberID="firstResponder"/>

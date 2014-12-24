@@ -14,9 +14,10 @@ class MealController: UIViewController {
 
     @IBOutlet var image: UIImageView?
     @IBOutlet var slideInfo: SlideInfo?
-    @IBOutlet var timer: TimerLabel?
+    @IBOutlet var timeLeft: TimerLabel?
     @IBOutlet var startButton: UIButton?
     @IBOutlet var pauseButton: UIButton?
+    var timer: Timer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,9 +28,11 @@ class MealController: UIViewController {
             return
         }
         
+        self.setUpTimer(self.recipe!.secondsToPrepare)
+        
         let setRecipe: Recipe = recipe!
         self.setImage(setRecipe.imageName)
-        self.timer?.setTime(self.recipe!.secondsToPrepare)
+        self.timeLeft?.setTime(self.recipe!.secondsToPrepare)
         self.view.backgroundColor = setRecipe.color
         self.slideInfo?.cookingInfo!.text = setRecipe.cookingInfo
     }
@@ -47,13 +50,32 @@ class MealController: UIViewController {
         self.image?.image = recipeImage
     }
     
+    func setUpTimer(initialTime: UInt) {
+        self.timer = Timer()
+        self.timer?.timeLeft = Int32(initialTime)
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"timerUpdate", name:"timerUpdate", object: self.timer)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector:"timerFinish", name:"timerFinish", object: self.timer)
+    }
+    
+    func timerUpdate() {
+        let timeLeft = UInt(self.timer!.timeLeft)
+        self.timeLeft?.setTime(timeLeft)
+    }
+    
+    func timerFinished() {
+        
+    }
+    
     @IBAction func startTapped(sender: UIButton) {
         self.startButton?.enabled = false
         self.pauseButton?.enabled = true
+        self.timer?.start()
     }
     
     @IBAction func pauseTapped(sender: UIButton) {
         self.startButton?.enabled = true
         self.pauseButton?.enabled = false
+        self.timer?.pause()
     }
 }
