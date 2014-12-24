@@ -304,7 +304,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uz1-kX-FH9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smiley_cookies@3x.png" translatesAutoresizingMaskIntoConstraints="NO" id="uz1-kX-FH9">
                                 <rect key="frame" x="119.5" y="120" width="360" height="360"/>
                                 <constraints>
                                     <constraint firstAttribute="height" priority="250" constant="600" id="gCX-wC-gPS"/>
@@ -445,19 +445,20 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="rTq-Sn-I3u" secondAttribute="trailing" id="5aS-nK-AHf"/>
                             <constraint firstItem="6ez-hu-JL0" firstAttribute="width" secondItem="ECB-wM-EBI" secondAttribute="width" multiplier="0.1" priority="250" id="6P6-bG-uFX"/>
-                            <constraint firstItem="6ez-hu-JL0" firstAttribute="top" secondItem="Ph8-8H-W3l" secondAttribute="bottom" priority="750" constant="12" id="7sN-Gp-e0E"/>
+                            <constraint firstItem="6ez-hu-JL0" firstAttribute="top" secondItem="Ph8-8H-W3l" secondAttribute="bottom" priority="200" constant="12" id="7sN-Gp-e0E"/>
                             <constraint firstItem="6ez-hu-JL0" firstAttribute="height" secondItem="ECB-wM-EBI" secondAttribute="height" id="97T-JO-NER"/>
                             <constraint firstItem="sBo-eM-ZCG" firstAttribute="top" secondItem="T91-Qd-Pj0" secondAttribute="bottom" constant="8" id="9gz-Ab-ImH"/>
-                            <constraint firstItem="6ez-hu-JL0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ph8-8H-W3l" secondAttribute="bottom" constant="8" id="BAg-rt-mTC"/>
+                            <constraint firstItem="6ez-hu-JL0" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Ph8-8H-W3l" secondAttribute="bottom" priority="250" constant="8" id="BAg-rt-mTC"/>
                             <constraint firstItem="sBo-eM-ZCG" firstAttribute="top" secondItem="rTq-Sn-I3u" secondAttribute="bottom" constant="8" id="Cg0-Dr-5SJ"/>
                             <constraint firstItem="tEH-md-MDN" firstAttribute="trailing" secondItem="Iac-uJ-ZNS" secondAttribute="leading" priority="900" constant="35" id="HjZ-pJ-YUv" userLabel="Tab snaps to side"/>
                             <constraint firstItem="uz1-kX-FH9" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Iac-uJ-ZNS" secondAttribute="leading" constant="60" id="HwS-fn-YAH"/>
                             <constraint firstItem="T91-Qd-Pj0" firstAttribute="leading" secondItem="ECB-wM-EBI" secondAttribute="trailing" id="JD7-PX-Lo0"/>
                             <constraint firstItem="uz1-kX-FH9" firstAttribute="top" relation="greaterThanOrEqual" secondItem="Iac-uJ-ZNS" secondAttribute="top" constant="120" id="NvX-ZQ-iqg"/>
+                            <constraint firstAttribute="centerY" secondItem="uz1-kX-FH9" secondAttribute="centerY" priority="700" id="PAn-fA-2Y7"/>
                             <constraint firstItem="6ez-hu-JL0" firstAttribute="leading" secondItem="T91-Qd-Pj0" secondAttribute="trailing" id="TXm-4e-Cuw"/>
                             <constraint firstItem="dA7-CD-413" firstAttribute="leading" secondItem="6ez-hu-JL0" secondAttribute="trailing" id="Wlr-mc-kGl"/>
                             <constraint firstItem="dA7-CD-413" firstAttribute="height" secondItem="T91-Qd-Pj0" secondAttribute="height" id="XS6-5P-zDw"/>
-                            <constraint firstItem="Ph8-8H-W3l" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uz1-kX-FH9" secondAttribute="bottom" constant="8" id="b2V-ga-mon"/>
+                            <constraint firstItem="Ph8-8H-W3l" firstAttribute="top" relation="greaterThanOrEqual" secondItem="uz1-kX-FH9" secondAttribute="bottom" priority="250" constant="8" id="b2V-ga-mon"/>
                             <constraint firstItem="6ez-hu-JL0" firstAttribute="height" secondItem="T91-Qd-Pj0" secondAttribute="height" id="dOt-8a-7YN"/>
                             <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="uz1-kX-FH9" secondAttribute="trailing" constant="60" id="dvy-5F-Dwr"/>
                             <constraint firstItem="tEH-md-MDN" firstAttribute="leading" secondItem="Iac-uJ-ZNS" secondAttribute="leading" priority="100" id="efH-ws-IOt" userLabel="Text snaps to side"/>
@@ -524,5 +525,6 @@
         <image name="logo.png" width="954" height="1342"/>
         <image name="red_button.png" width="354" height="157"/>
         <image name="setting_button@3x.png" width="453" height="459"/>
+        <image name="smiley_cookies@3x.png" width="1200" height="1200"/>
     </resources>
 </document>
